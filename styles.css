@@ -35,6 +35,10 @@ body {
     align-items: center;
     justify-content: center;
 }
+.hero .container{
+    /* background-color: #003d5b; */
+    padding-top: 300px;
+}
 
 .hero-overlay {
     position: absolute;
@@ -51,6 +55,8 @@ body {
     z-index: 2;
     text-align: center;
     color: #fff;
+    background-color: #e6f7f7;
+    border-radius: 10px;
 }
 
 .hero h1 {
@@ -94,7 +100,7 @@ body {
     }
     .hero h1 {
         font-size: 2em;
-        margin-top: 400px;
+        /* margin-top: 400px; */
         color: #e63946; /* Красный */
         margin-bottom: 20px;
         animation: fadeIn 1s ease-out;
@@ -482,13 +488,15 @@ center; color: #003d5b; /* Темно-синий */ }
 }
 
 button.prev, button.next {
-  
+    width: 75px;
+    height: 30px;
+    font-size: 20px;
     top: 50%;
     transform: translateY(-50%);
     background-color: #003d5b; /* Темно-синий */
     color: white;
     border: none;
-    padding: 10px;
+    padding: 30px;
     cursor: pointer;
     z-index: 1;
 }
