@@ -6,7 +6,8 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    color: #333;
+    /* color: #11144d; */
+    
     background-color: #fff;
     overflow-x: hidden;
 }
@@ -22,11 +23,21 @@ body {
     position: relative;
     height: 100vh;
     background: url('img/MyCollages.jpg');
+    background-size: cover;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: gradientMove 10s ease infinite;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный наложенный слой */
+    z-index: 1;
 }
 
 .hero-content {
@@ -38,7 +49,7 @@ body {
 
 .hero h1 {
     font-size: 3em;
-    color: red;
+    color: #e63946; /* Красный */
     margin-bottom: 20px;
     animation: fadeIn 1s ease-out;
 }
@@ -50,16 +61,6 @@ body {
     animation: fadeIn 2s ease-out;
 }
 
-.hero-image {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 50%;
-    height: auto;
-    object-fit: cover;
-    opacity: 0.6;
-    animation: fadeIn 2s ease-out;
-}
 
 .about, .course, .contact {
     padding: 60px 20px;
@@ -69,20 +70,24 @@ body {
     margin-bottom: 20px;
     position: relative;
 }
+
 .about-container{
     display: flex;
+}
+
+.about-container p {
+    font-size: 2rem;
 }
 @media (max-width:1265px) {
     .about-container{
         flex-direction: column;
         align-items: center;
-
+    }
+    .about-container p {
+        font-size: 1em;
     }
 }
 
-.about-container p {
-    font-size: 2em;
-}
 .section-image {
     width: 100%;
     max-width: 500px;
@@ -94,7 +99,7 @@ body {
 }
 
 h2 {
-    color: #1d3557;
+    color: #11144d;
     font-size: 2em;
     margin-bottom: 20px;
     animation: fadeIn 1s ease-out;
@@ -130,19 +135,58 @@ ul li {
 }
 
 .button-primary {
-    background-color: #1d3557;
+    background-color: #11144d;
 }
 
 .button-primary:hover {
-    background-color: #0a1f3b;
+    background-color: #11144d;
 }
 
 .social {
-    margin: 20px 0;
+    display: flex;
+    justify-content: center; /* Центрирует кнопки по горизонтали */
+    gap: 10px; /* Отступ между кнопками */
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+    padding: 6px 12px;
+    color: #ffffff;
+    background-color: #4aa3a3; /* Тиффани */
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #2d6a4f; /* Более тёмный Тиффани */
+    transform: scale(1.05);
+}
+
+.button-primary {
+    background-color: #1d3557; /* Тёмно-синий */
+}
+
+.button-primary:hover {
+    background-color: #0a1f3b; /* Ещё более тёмный синий */
+}
+
+.contact {
+    padding: 60px 20px;
+    background-color: #ebeaeaa4;
+    border-radius: 8px;
+    box-shadow: 0 0px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
 }
 
 footer {
-    background-color: #1d3557;
+    background-color: #11144d;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -174,7 +218,7 @@ h2, h3 {
 
 p {
     font-size: 1.2em;
-    color: #333;
+    color: #11144d;
     margin-bottom: 20px;
 }
 
@@ -243,7 +287,7 @@ p {
 .problem-item p {
     margin: 0;
     font-size: 1.1em;
-    color: #1d3557;
+    color: #11144d;
 }
 
 /* Анимации для плавного появления элементов */
@@ -256,4 +300,9 @@ p {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+
+.footer-text{
+    color: white;
 }
