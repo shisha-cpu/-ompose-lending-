@@ -527,3 +527,52 @@ button.next {
     align-items: center;
     flex-direction: column;
 }
+
+
+@media (min-width : 1200px) {
+    .hero-content {
+        margin-top: 100px;
+        padding: 49px 70px;
+    }
+    .text{
+        font-size: 1.3em;
+        text-align: center;
+        margin-top: 20px;
+    }
+    img{
+        max-height: 800px;
+        width: 100px;
+    }
+    .course-content{
+        display: flex;
+    }
+    .none{
+        display: none;
+    }
+    .about-content li{
+        font-size: 25px;
+    }
+    .colum{
+        font-size: 25px;
+        margin-top: 50px;
+        margin-left: 10px;
+    }
+    .course-block{
+        font-size: 20px;
+
+    }
+    .button{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        font-size: 30px;
+    }
+    button.prev, button.next {
+
+
+        border-radius: 100px;
+        margin-top: 20px
+    }
+
+ 
+}   
